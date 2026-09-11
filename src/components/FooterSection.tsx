@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, Variants } from 'motion/react';
+import { useAestheticFont } from '../context/FontContext';
 
 const fadeVariant: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -11,6 +12,8 @@ const fadeVariant: Variants = {
 };
 
 export const FooterSection: React.FC = () => {
+  const { currentFont } = useAestheticFont();
+
   return (
     <footer className="relative w-full max-w-xl mx-auto px-4 pt-8 pb-16 text-center text-[#2B231D]">
       <motion.div
@@ -51,10 +54,10 @@ export const FooterSection: React.FC = () => {
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
         variants={fadeVariant}
-        className="text-3xl font-serif-luxury font-medium text-[#2B231D] tracking-wide mb-1"
+        className={`text-4xl sm:text-5xl ${currentFont.fontClass} font-normal text-[#2B231D] tracking-normal mb-1 transition-all duration-300`}
       >
         Milhan{' '}
-        <span className="font-formal-script text-4xl text-[#B8860B]">&</span>{' '}
+        <span className={`${currentFont.fontClass} text-3xl sm:text-4xl text-[#B8860B] transition-all duration-300`}>&</span>{' '}
         Hussnain
       </motion.h4>
 

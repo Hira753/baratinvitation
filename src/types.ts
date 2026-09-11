@@ -3,6 +3,23 @@ export interface RSVPContact {
   display: string;
 }
 
+export type AestheticFontId =
+  | 'allura'
+  | 'pinyon'
+  | 'montecarlo'
+  | 'alexbrush'
+  | 'greatvibes'
+  | 'playfair';
+
+export interface AestheticFontOption {
+  id: AestheticFontId;
+  name: string;
+  label: string;
+  fontClass: string;
+  preview: string;
+  description: string;
+}
+
 export interface CountdownTime {
   days: number;
   hours: number;

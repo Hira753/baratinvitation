@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import confetti from 'canvas-confetti';
 import { Sparkles, ChevronDown } from 'lucide-react';
 import { audioController } from '../services/audioController';
+import { useAestheticFont } from '../context/FontContext';
 
 interface EnvelopeModalProps {
   isOpen: boolean;
@@ -10,6 +11,7 @@ interface EnvelopeModalProps {
 }
 
 export const EnvelopeModal: React.FC<EnvelopeModalProps> = ({ isOpen, onOpen }) => {
+  const { currentFont } = useAestheticFont();
   const [opening, setOpening] = useState(false);
   const [flapOpen, setFlapOpen] = useState(false);
   const [cardUp, setCardUp] = useState(false);
@@ -91,11 +93,11 @@ export const EnvelopeModal: React.FC<EnvelopeModalProps> = ({ isOpen, onOpen }) 
                 بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
               </p>
               <div className="w-8 h-[1px] bg-[#D4AF37] my-2" />
-              <h2 className="text-2xl font-serif-luxury text-[#8C6D37] font-medium tracking-wide">
+              <h2 className={`text-3xl sm:text-4xl ${currentFont.fontClass} font-normal text-[#8C6D37] leading-tight tracking-normal`}>
                 Milhan Qaiser
               </h2>
-              <span className="font-formal-script text-2xl text-[#B8860B] -my-1">&</span>
-              <h2 className="text-2xl font-serif-luxury text-[#8C6D37] font-medium tracking-wide">
+              <span className={`${currentFont.fontClass} text-2xl text-[#B8860B] -my-0.5`}>&</span>
+              <h2 className={`text-3xl sm:text-4xl ${currentFont.fontClass} font-normal text-[#8C6D37] leading-tight tracking-normal`}>
                 Muhammad Hussnain
               </h2>
               <div className="mt-4 flex items-center gap-1.5 text-[9px] font-display-luxury tracking-widest text-[#8C6D37] uppercase font-semibold">

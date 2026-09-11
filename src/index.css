@@ -1,10 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Brittany Signature';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Brittany Signature'),
+       url('/fonts/BrittanySignature.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/39082/BrittanySignature-LjyZ.woff') format('woff');
+}
+
 :root {
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-display: "Cinzel", serif;
   --font-script: "Great Vibes", cursive;
-  --font-formal-script: "Pinyon Script", "Petit Formal Script", cursive;
+  --font-brittany: "Brittany Signature", "Great Vibes", cursive;
+  --font-formal-script: "Brittany Signature", "Petit Formal Script", cursive;
   --font-formal-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
   --font-arabic: "Amiri", "Traditional Arabic", serif;
   --font-sans: "Plus Jakarta Sans", sans-serif;
@@ -19,11 +30,33 @@
 .font-script-luxury {
   font-family: "Great Vibes", cursive;
 }
+.font-allura {
+  font-family: "Allura", cursive;
+}
+.font-pinyon {
+  font-family: "Pinyon Script", cursive;
+}
+.font-montecarlo {
+  font-family: "MonteCarlo", cursive;
+}
+.font-alexbrush {
+  font-family: "Alex Brush", cursive;
+}
+.font-greatvibes {
+  font-family: "Great Vibes", cursive;
+}
+.font-playfair-italic {
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+}
+.font-brittany {
+  font-family: "Brittany Signature", "Great Vibes", cursive;
+}
 .font-formal-script {
-  font-family: "Pinyon Script", "Petit Formal Script", cursive;
+  font-family: "Allura", "Pinyon Script", cursive;
 }
 .font-petit-formal {
-  font-family: "Petit Formal Script", "Pinyon Script", cursive;
+  font-family: "Allura", "Pinyon Script", cursive;
 }
 .font-formal-serif {
   font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
