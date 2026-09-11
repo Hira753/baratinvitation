@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FontProvider } from './context/FontContext';
-import { FontSwitcher } from './components/FontSwitcher';
 import { EnvelopeModal } from './components/EnvelopeModal';
 import { MusicPlayer } from './components/MusicPlayer';
 import { BaratSection } from './components/BaratSection';
@@ -27,9 +26,6 @@ export default function App() {
 
         {/* Floating Audio Controller */}
         <MusicPlayer />
-
-        {/* Floating Aesthetic Font Switcher */}
-        <FontSwitcher />
 
         {/* Main Wedding Content Flow */}
         <main className="relative z-10 w-full flex flex-col items-center pt-4 pb-12">

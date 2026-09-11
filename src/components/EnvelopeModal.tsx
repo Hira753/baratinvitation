@@ -93,11 +93,11 @@ export const EnvelopeModal: React.FC<EnvelopeModalProps> = ({ isOpen, onOpen }) 
                 بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
               </p>
               <div className="w-8 h-[1px] bg-[#D4AF37] my-2" />
-              <h2 className={`text-3xl sm:text-4xl ${currentFont.fontClass} font-normal text-[#8C6D37] leading-tight tracking-normal`}>
+              <h2 className={`text-2xl sm:text-3xl ${currentFont.fontClass} font-normal text-[#8C6D37] leading-tight tracking-normal whitespace-nowrap`}>
                 Milhan Qaiser
               </h2>
-              <span className={`${currentFont.fontClass} text-2xl text-[#B8860B] -my-0.5`}>&</span>
-              <h2 className={`text-3xl sm:text-4xl ${currentFont.fontClass} font-normal text-[#8C6D37] leading-tight tracking-normal`}>
+              <span className={`${currentFont.fontClass} text-xl text-[#B8860B] -my-0.5`}>&</span>
+              <h2 className={`text-2xl sm:text-3xl ${currentFont.fontClass} font-normal text-[#8C6D37] leading-tight tracking-normal whitespace-nowrap`}>
                 Muhammad Hussnain
               </h2>
               <div className="mt-4 flex items-center gap-1.5 text-[9px] font-display-luxury tracking-widest text-[#8C6D37] uppercase font-semibold">

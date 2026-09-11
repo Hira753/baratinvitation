@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, Variants } from 'motion/react';
-import { Sparkles, Clock, Wand2 } from 'lucide-react';
-import { useAestheticFont, FONT_OPTIONS } from '../context/FontContext';
+import { Sparkles, Clock } from 'lucide-react';
+import { useAestheticFont } from '../context/FontContext';
 
 const fadeUpVariant: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -13,7 +13,7 @@ const fadeUpVariant: Variants = {
 };
 
 export const BaratSection: React.FC = () => {
-  const { currentFont, setFontId } = useAestheticFont();
+  const { currentFont } = useAestheticFont();
 
   return (
     <section className="relative w-full max-w-xl mx-auto px-4 py-4 flex flex-col items-center">
@@ -74,47 +74,20 @@ export const BaratSection: React.FC = () => {
           variants={fadeUpVariant}
           className="relative z-10 my-3 flex flex-col items-center"
         >
-          <h1 className={`text-5xl sm:text-6xl md:text-7xl ${currentFont.fontClass} font-normal text-[#8C6D37] leading-tight tracking-normal transition-all duration-300`}>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl ${currentFont.fontClass} font-normal text-[#8C6D37] leading-tight tracking-normal whitespace-nowrap transition-all duration-300`}>
             Milhan Qaiser
           </h1>
           <div className="my-0.5 flex items-center justify-center gap-2">
-            <span className={`${currentFont.fontClass} text-3xl sm:text-4xl text-[#B8860B] italic transition-all duration-300`}>
+            <span className={`${currentFont.fontClass} text-2xl sm:text-3xl text-[#B8860B] italic transition-all duration-300`}>
               with
             </span>
           </div>
-          <h1 className={`text-5xl sm:text-6xl md:text-7xl ${currentFont.fontClass} font-normal text-[#8C6D37] leading-tight tracking-normal transition-all duration-300`}>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl ${currentFont.fontClass} font-normal text-[#8C6D37] leading-tight tracking-normal whitespace-nowrap transition-all duration-300`}>
             Muhammad Hussnain
           </h1>
           <p className="text-[10px] sm:text-xs font-display-luxury tracking-widest text-[#6B5A46] uppercase font-bold mt-2">
             S/O MR & MRS. MUHAMMAD MUNIR BHUTTA
           </p>
-
-          {/* Aesthetic Font Quick Switcher */}
-          <div className="mt-3.5 flex flex-col items-center">
-            <div className="flex items-center gap-1 text-[10px] font-sans font-medium text-[#8C6D37] mb-1.5 uppercase tracking-wider">
-              <Wand2 className="w-2.5 h-2.5 text-[#B8860B]" />
-              <span>Aesthetic Font Style:</span>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-1.5 max-w-md">
-              {FONT_OPTIONS.map((font) => {
-                const isActive = currentFont.id === font.id;
-                return (
-                  <button
-                    key={font.id}
-                    type="button"
-                    onClick={() => setFontId(font.id)}
-                    className={`px-2.5 py-1 rounded-full text-[11px] transition-all cursor-pointer ${
-                      isActive
-                        ? 'bg-[#8C6D37] text-white shadow-xs font-semibold'
-                        : 'bg-[#FAF6EE] text-[#7A5E33] border border-[#D4AF37]/40 hover:bg-[#F3EAD9]'
-                    }`}
-                  >
-                    {font.name.replace(' Script', '')}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
         </motion.div>
 
         {/* Date & Time */}
